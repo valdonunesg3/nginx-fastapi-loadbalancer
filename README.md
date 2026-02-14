@@ -59,8 +59,6 @@ automação, demonstrando:
 
 ## Como usar
 
-## Como usar
-
 ### 1. Clonar o repositório
 
 ``` bash
@@ -117,9 +115,6 @@ Após a criação das instâncias:
 1.  Acesse as EC2 das aplicações.
 2.  Siga o guia:
 
-```{=html}
-<!-- -->
-```
     fastapi-app/guia-loadbalancer-fastapi-nginx.md
 
 Esse guia cobre:
