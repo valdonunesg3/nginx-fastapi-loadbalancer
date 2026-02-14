@@ -66,7 +66,7 @@ git clone https://github.com/valdonunesg3/nginx-fastapi-loadbalancer.git
 cd nginx-fastapi-loadbalancer
 ```
 > [!NOTE]
-> A maioria dos parâmetros ajustáveis está comentada nos arquivos do projeto, como região, bucket do tfstate, chave SSH e tamanho de disco.  
+> A maioria dos parâmetros ajustáveis estão comentados nos arquivos do projeto, como region, bucket do tfstate, chave SSH e tamanho de disco.  
 > Esses valores variam conforme a infraestrutura desejada.  
 > O objetivo foi automatizar o máximo possível via `terraform.tfvars`.  
 > O projeto seguirá sendo aprimorado conforme a evolução dos estudos.
