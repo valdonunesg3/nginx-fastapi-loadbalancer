@@ -91,21 +91,26 @@ Defina valores de:
 -   `cidr_block`
 -   `instance_count`
 
-    provider.tf:
+    provider.tf
+
+Defina valores de:
 
     `bucket`
 -   `key`
 -   `region`
 
-    modules/ec2:
+    modules/ec2
 
     instance.tf
+
+Defina valores de:
 -   `ami`
 -   `instance_type`
     `key_name`
     `informações do disco`
 
     sg.tf
+    
     `cidr_ipv4`
 
 
