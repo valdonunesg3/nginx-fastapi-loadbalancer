@@ -27,7 +27,7 @@ Execute os passos abaixo **nas duas EC2 de aplicação**.
 
 ## 1. Docker já Instalado
 
-As duas EC@ já vão está com o docker e o docker-compose instalado, pois tem um script user.data.sh que será executado na hora da criação das máquinas, automatizando a instalação das ferramentas necessárias, já na criação das EC2. 
+As duas EC2 já vão está com o docker e o docker-compose instalado, pois tem um script user.data.sh que será executado na hora da criação das máquinas, automatizando a instalação das ferramentas necessárias, já na criação das EC2. 
 
 ------------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ mkdir src
 
 ------------------------------------------------------------------------
 
-## 4. Criar o arquivo da aplicação
+## 4. Criar o arquivo da aplicação - aplicação simples só pra gente testar o funcionamento do load balance
 
 Arquivo: `src/app.py`
 

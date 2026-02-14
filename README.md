@@ -81,15 +81,33 @@ fastapi-app \| Código da aplicação e guias de execução \|
 
 ### 1. Ajustar variáveis
 
-Edite o arquivo:
+Edite os arquivos:
 
     terraform.tfvars
 
-Defina valores como:
+Defina valores de:
 
 -   `project_name`
 -   `cidr_block`
--   `região da AWS`
+-   `instance_count`
+
+    provider.tf:
+
+    `bucket`
+-   `key`
+-   `region`
+
+    modules/ec2:
+
+    instance.tf
+-   `ami`
+-   `instance_type`
+    `key_name`
+    `informações do disco`
+
+    sg.tf
+    `cidr_ipv4`
+
 
 ------------------------------------------------------------------------
 
@@ -97,6 +115,8 @@ Defina valores como:
 
 ``` bash
 terraform init
+terraform fmt --recursive
+terraform validate
 ```
 
 ------------------------------------------------------------------------
@@ -112,7 +132,7 @@ terraform plan -out=tfplan
 ### 4. Aplicar a infraestrutura
 
 ``` bash
-terraform apply tfplan
+terraform apply -auto-approve
 ```
 
 Isso irá criar:
