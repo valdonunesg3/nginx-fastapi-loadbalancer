@@ -1,4 +1,4 @@
-# Nginx + FastAPI Load Balancer com Terraform
+# Nginx + FastAPI Load Balancer com Terraform na AWS
 
 Projeto demonstrando uma arquitetura simples de balanceamento de carga
 utilizando **Nginx** como load balancer e múltiplas aplicações
@@ -22,14 +22,7 @@ automação, demonstrando:
 
 ## Arquitetura
 
-                    Internet
-                        |
-                   [ Nginx EC2 ]
-                        |
-            ---------------------------
-            |                         |
-     [ FastAPI EC2 - 1 ]     [ FastAPI EC2 - 2 ]
-         Docker App               Docker App
+![Arquitetura](arquitetura-loadbalancer.png)
 
 ------------------------------------------------------------------------
 
@@ -55,19 +48,6 @@ automação, demonstrando:
 
 ------------------------------------------------------------------------
 
-## Principais arquivos
-
-| Arquivo \| Descrição \|
-
-\|--------\|----------\| provider.tf \| Configuração do provider AWS e
-backend S3 \| \| modules.tf \| Inclusão dos módulos de rede e EC2 \| \|
-variables.tf \| Variáveis do projeto \| \| terraform.tfvars \| Valores
-das variáveis \| \| modules/network \| Criação da VPC, subnets e IGW \|
-\| modules/ec2 \| Criação das instâncias EC2 e security groups \| \|
-fastapi-app \| Código da aplicação e guias de execução \|
-
-------------------------------------------------------------------------
-
 ## Pré-requisitos
 
 -   Conta AWS configurada
@@ -79,39 +59,20 @@ fastapi-app \| Código da aplicação e guias de execução \|
 
 ## Como usar
 
-### 1. Ajustar variáveis
+## Como usar
 
-Edite os arquivos:
+### 1. Clonar o repositório
+
+``` bash
+git clone https://github.com/valdonunesg3/nginx-fastapi-loadbalancer.git
+cd nginx-fastapi-loadbalancer
+```
+
+### 2. Ajustar variáveis
+
+Edite o arquivo:
 
     terraform.tfvars
-
-Defina valores de:
-
--   `project_name`
--   `cidr_block`
--   `instance_count`
-
-    provider.tf
-
-Defina valores de:
-
-    `bucket`
--   `key`
--   `region`
-
-    modules/ec2
-
-    instance.tf
-
-Defina valores de:
--   `ami`
--   `instance_type`
-    `key_name`
-    `informações do disco`
-
-    sg.tf
-    
-    `cidr_ipv4`
 
 
 ------------------------------------------------------------------------
