@@ -89,7 +89,7 @@ Defina valores como:
 
 -   `project_name`
 -   `cidr_block`
--   região da AWS
+-   `região da AWS`
 
 ------------------------------------------------------------------------
 
