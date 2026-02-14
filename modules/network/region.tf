@@ -1,0 +1,1 @@
+data "aws_region" "current" {} # Obtém a região atual da AWS configurada no provider
