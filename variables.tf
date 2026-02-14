@@ -8,3 +8,8 @@ variable "project_name" {
   description = "Project name to used to name the resources (Name tag) "
 }
 
+variable "instance_count" {
+  type        = number
+  description = "Number of EC2 instances to be created"
+}
+
